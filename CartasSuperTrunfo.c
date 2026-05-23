@@ -24,7 +24,7 @@ int main() {
   printf("-- cadastro da carta 1 --\n");
 
   printf("digite o estado (A-H): ");
-  scanf(" %c", &estado1);
+  scanf(" %c", &estado1); //O espaço antes do %c serve para o scanf ignorar caracteres “sobrando” no teclado
   printf("o estado digitado foi: %c\n\n", estado1);
 
   printf("digite o codigo da carta: ");
@@ -34,16 +34,16 @@ int main() {
  getchar();
 
  printf("digite o nome da cidade: ");
- fgets(cidade1, 50, stdin);
+ fgets(cidade1, 50, stdin); //fgets lÊ a linha toda incluindo espaço
  printf("a cidade digitada foi: %s\n", cidade1);
 
   printf("digite a populacao: ");
   scanf("%d", &populacao1);
-  printf("a populacao digitada foi: %d\n\n", populacao1);
+  printf("a populacao digitada foi: %d habitantes\n\n", populacao1);
 
   printf("digite a area (km²): ");
   scanf("%f", &area1);
-  printf("a area digitada foi: %.2f\n\n", area1);
+  printf("a area digitada foi: %.2f km²\n\n", area1);
 
   printf("digite o PIB: ");
   scanf("%f", &PIB1);
@@ -58,7 +58,7 @@ int main() {
   printf("-- cadastro da carta 2 --\n");
 
   printf("digite o estado (A-H): ");
-  scanf(" %c", &estado2);
+  scanf(" %c", &estado2); //O espaço antes do %c serve para o scanf ignorar caracteres “sobrando” no teclado
   printf("o estado digitado foi: %c\n\n", estado2);
 
   printf("digite o codigo da carta: ");
@@ -73,11 +73,11 @@ int main() {
 
   printf("digite a populacao: ");
   scanf("%d", &populacao2);
-  printf("a populacao digitada foi: %d\n\n", populacao2);
+  printf("a populacao digitada foi: %d habitantes\n\n", populacao2);
 
   printf("digite a area (km²): ");
   scanf("%f", &area2);
-  printf("a area digitada foi: %.2f\n\n", area2);
+  printf("a area digitada foi: %.2f km²\n\n", area2);
 
   printf("digite o PIB: ");
   scanf("%f", &PIB2);
@@ -87,7 +87,45 @@ int main() {
   scanf("%d", &pontos2);
   printf("o numero de pontos turisticos digitados foi: %d\n\n", pontos2);
 
-  printf("-- comparacao entre as cartas --\n");
+ printf("\n===== CARTA 1 =====\n");
 
-  return 0;
+ printf("Estado: %c\n", estado1);
+ printf("Codigo: %s\n", codigo1);
+ printf("Cidade: %s\n", cidade1);
+ printf("Populacao: %d\n", populacao1);
+ printf("Area: %.2f km²\n", area1);
+ printf("PIB: %.2f\n", PIB1);
+ printf("Pontos turisticos: %d\n", pontos1);
+
+ printf("\n===== CARTA 2 =====\n");
+
+ printf("Estado: %c\n", estado2);
+ printf("Codigo: %s\n", codigo2);
+ printf("Cidade: %s\n", cidade2);
+ printf("Populacao: %d\n", populacao2);
+ printf("Area: %.2f km²\n", area2);
+ printf("PIB: %.2f\n", PIB2);
+ printf("Pontos turisticos: %d\n", pontos2);printf("\n===== CARTA 1 =====\n");
+
+ printf("Estado: %c\n", estado1);
+ printf("Codigo: %s\n", codigo1);
+ printf("nome da cidade: %s\n", cidade1);
+ printf("Populacao: %d\n", populacao1);
+ printf("Area: %.2f km²\n", area1);
+ printf("PIB: %.2f\n", PIB1);
+ printf("numero de pontos pontos turisticos: %d\n", pontos1);
+
+ printf("\n===== CARTA 2 =====\n");
+
+ printf("Estado: %c\n", estado2);
+ printf("Codigo: %s\n", codigo2);
+ printf("nome da cdade: %s\n", cidade2);
+ printf("Populacao: %d\n", populacao2);
+ printf("Area: %.2f km²\n", area2);
+ printf("PIB: %.2f\n", PIB2);
+ printf("numero de pontos turisticos: %d\n", pontos2);
+
+printf("-- comparacao entre as cartas --\n");
+
+return 0;
 }
