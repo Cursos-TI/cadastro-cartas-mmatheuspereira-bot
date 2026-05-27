@@ -10,7 +10,8 @@ int main() {
   float area1;
   float PIB1;
   int pontos1;
-
+  float dsp1, ppc1; //dsp = densidade populacional, ppc = pib per capta
+  
   // variaveis carta 2
   char estado2;
   char codigo2[20];
@@ -19,6 +20,8 @@ int main() {
   float area2;
   float PIB2;
   int pontos2;
+  float dsp2, ppc2; //dsp = densidade populacional, ppc = pib per capta
+  
 
   // entrada e saida da carta 1
   printf("-- cadastro da carta 1 --\n");
@@ -87,6 +90,12 @@ int main() {
   scanf("%d", &pontos2);
   printf("o numero de pontos turisticos digitados foi: %d\n\n", pontos2);
 
+  dsp1 = (float) populacao1 / area1;
+  ppc1 = PIB1 *1000000000 / populacao1;
+
+  dsp2 = (float) populacao2 / area2;
+  ppc2 = PIB2 *1000000000 / populacao2;
+
  printf("\n===== CARTA 1 =====\n");
 
  printf("Estado: %c\n", estado1);
@@ -96,6 +105,8 @@ int main() {
  printf("Area: %.2f km²\n", area1);
  printf("PIB: %.2f\n", PIB1);
  printf("Pontos turisticos: %d\n", pontos1);
+ printf("densidade populacional: %.2f  hab/km²\n", dsp1);
+ printf("PIB per capita: %.2f reais\n", ppc1);
 
  printf("\n===== CARTA 2 =====\n");
 
@@ -105,25 +116,10 @@ int main() {
  printf("Populacao: %d\n", populacao2);
  printf("Area: %.2f km²\n", area2);
  printf("PIB: %.2f\n", PIB2);
- printf("Pontos turisticos: %d\n", pontos2);printf("\n===== CARTA 1 =====\n");
-
- printf("Estado: %c\n", estado1);
- printf("Codigo: %s\n", codigo1);
- printf("nome da cidade: %s\n", cidade1);
- printf("Populacao: %d\n", populacao1);
- printf("Area: %.2f km²\n", area1);
- printf("PIB: %.2f\n", PIB1);
- printf("numero de pontos pontos turisticos: %d\n", pontos1);
-
- printf("\n===== CARTA 2 =====\n");
-
- printf("Estado: %c\n", estado2);
- printf("Codigo: %s\n", codigo2);
- printf("nome da cdade: %s\n", cidade2);
- printf("Populacao: %d\n", populacao2);
- printf("Area: %.2f km²\n", area2);
- printf("PIB: %.2f\n", PIB2);
- printf("numero de pontos turisticos: %d\n", pontos2);
+ printf("Pontos turisticos: %d\n", pontos2);
+ printf("densidade populacional: %.2f  hab/km²\n", dsp2);
+ printf("PIB per capita: %.2f reais\n", ppc2);
+ 
 
 printf("-- comparacao entre as cartas --\n");
 
